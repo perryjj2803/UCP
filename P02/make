@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS = -Wall -pedantic -ansi
+OBJ = main.o program1.o program2.o
+DEPS = (header files)  
+ 
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+(program name): $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+

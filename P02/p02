@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include "macros.h"
+
+int boundsCheck();
+int powersOf2(int numTimes);
+int main()
+{
+	int low, value, high, result;
+	printf("Please enter lower bound, value and upper bound\n");
+	scanf("%d %d %d", &low ,&value ,&high);
+	
+	result = boundsCheck(low ,value ,high);
+	printf("result is %d\n" ,result);
+	
+	return 0;
+
+}
+int boundsCheck(int low, int value, int high)
+{
+	int result;
+	if(low <= value && value <= high)
+	{
+		result  = TRUE;
+	}
+	else
+	{
+		result = FALSE;
+	}
+	return result;
+}
