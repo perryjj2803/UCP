@@ -10,6 +10,7 @@ int** initialarray(int numRow, int numCol)
 	for(int i = 0; i < numRow; i++)
 	{
 		playArea[i] = (int*)malloc(sizeof(int)*numCol);
+	}
 		for(i=0; i < numRow; i++)
 		{
 			for(j=0; j < numCol; j++)
