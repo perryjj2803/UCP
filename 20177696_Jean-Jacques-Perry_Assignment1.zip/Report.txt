@@ -1,0 +1,35 @@
+
+Functionalities not completed:
+1. Failed to initialize snake body/tail and make it follow snake head.
+
+Spent most of assignment trying to figuire out how to initialize the rest of the snake body including the tail. tried to make the snake its own 2D array before attempting to use structs for snake body parts and then attempting to have an array 
+for snake body X and Y co-ordinates as seen commented in my main.c (I left my tail function in main.c for debugging purposes). I struggled with the rest of the snake structure specifically because I didnt know how to print out the games contents concisely 
+since various elements of my game were different data types. My print function defaults the play area to empty space prior to using if statements to match [i][j] to food co-ordinates and print "@" or to the snake head co-ordinates and print "headDirection". 
+I struggled to make this style of printing compatible with multiple arrays in trying to make the body array follow the snake head co-ordinates.
+
+
+2. Failed to implement Unbeatable feature
+
+I couldnt implement the unbeatable feature since my snake did not have a body to collide/cross over with to test this function.
+
+Functionalities completed:
+1. No memory leaks using valgrind +flags
+
+2. Correct command line arguments verification with proper response: Handled in main.c using if statements after using atoi to convert user input argv to numRow numCol and snakeSize. numRow and numCol must be greater than or equal to 5, snakeSize must be 
+not be greater than numCol and cannot be less than 3. There must only be 3 arguments passed.
+
+3. Proper memory allocation for the 2D map array and the snake: 2D map array initialized in initialarray function (play_area.c) using malloc to create size of user input for rows and column values. Memory is also freed in freeplayArea.
+
+4. Able to clear the screen and re-print the map on every action: screen is cleared using system("clear") in main.c. Next user move is also printed out in printArray using snake_movement function to determine the next snake head value/direction. This logic
+is contained within the while loop so it is repeated after every action/user input.
+
+5. Randomly place the food on the map every time the program starts. Food should not overlap with the snake at the beggining of the game: food value is randomly initialized using random_generator.c. foodXValue lower bound of 2 to prevent food printing on 
+top row of the play area potentially overlapping with the snake. Food is placed using the printarray function.
+
+6. Able to move the snake with the command from the user. Snake head char changes every time the player changes direction. The body and tail of the snake should follow the same path the head travels. Snake head changes to ^ for up v for down < for left and >
+for right depending on user input handled in void movement (snake_movements.c). This is accomplished using switch statement for each keyboard input correlating to its directional value and assigning the character of the snake head to *headDirection. 
+Unfortunately the snake has no body/tail so this objective could not be fully satisfied.
+
+7. Successfully disable the echo and canonical temporarily so that the user does not need to press enter key to issue command. This is handled using supplied file terminal.c 
+
+

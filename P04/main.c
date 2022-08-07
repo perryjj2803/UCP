@@ -66,7 +66,7 @@ int* reverse(int intArray[], int length)
 }
 
 /*int conversion(char charArray[], int intArray[], int length);
-{
+{ ligma
 }*/
 
 

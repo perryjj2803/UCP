@@ -1,0 +1,14 @@
+
+I was initially going to submit without a working movement() function however after writing my initial report I was about to submit and noticed a syntax error in my snake_movement.c which i rectified
+and it fixed my movement function entirely. As such I had very little time to test and fix my food counter/tally.
+
+I implemented the food counter but its hard to test given I couldn’t make the snake move right up until submission. food counter is incremented within condition 
+when the snake coordinates in the play area match that of the foods coordinates, this both increments the foodTally and is meant to be reflected in the output with foodTally/foodToWin displayed.
+While trying to debug I was going to change foodTally to a pointer but I got the warning that when I was incrementing foodTally it wasnt being used.
+
+I also implemented the correct conditions for game over (hitting a border) and when to win (when foodTally == foodToWin). But I could not get foodTally to increment properly and test the win condition.
+
+As for fully completed functionalities. Correct command line arguments, FileIO and snake movement have been fully completed.
+My linkedlists however are not generic and winning the game is programmed but cannot be tested due to foodTally not incrementing as expected.
+
+Also I receive a warning on compile for implicit declaration of the random functions which I did not program but used as per assignment instructions and I was unable to fix this. And I received an extension til 24/5 hence the day late submission.

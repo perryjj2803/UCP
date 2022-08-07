@@ -1,0 +1,6 @@
+Task 1: All 3 bash scripts were carried out and function as expected.
+
+Task 2: I struggled with updating the cell grids as my function used to count each cell's neighbours and generate a new play area for the next generation is incomplete. 
+Specifically I struggled with counting neighbours for a cell on the boundary (a cell on the edge) as using my neighbour count function it will attempt to count a value outside
+of the array and lead to a segmentation fault as it is attempting to access invalid memory. I couldnt find any solutions for this. All the other functionalities/marking criteria items 
+have been carried out and completed successfully.

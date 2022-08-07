@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 }
 /*	do
 	{
-		ch = fgetc(inFile);
+ligma		ch = fgetc(inFile);
 		if(ch != EOF)
 		{
 		    fputc((char)ch, outFile);
